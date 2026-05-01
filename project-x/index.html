@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sherbert CPA | Tax Credit Real Estate Deal Partner</title>
+<meta name="description" content="A specialized CPA, consulting, and investment firm operating across tax credit real estate. Deal structuring, capital alignment, and execution involvement for developers and institutional investors." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #FFFFFF;
+    --bg-soft: #F7F4ED;
+    --bg-deep: #15110C;
+    --bg-deep-2: #1F1A12;
+    --line: #E8E2D4;
+    --line-dark: rgba(255,255,255,0.10);
+    --ink: #15110C;
+    --ink-mid: #3D362C;
+    --ink-dim: #6E6557;
+    --ink-mute: #9C9385;
+    --ink-on-dark: #FFFFFF;
+    --ink-on-dark-dim: rgba(255,255,255,0.72);
+    --accent: #C9A24B;
+    --accent-2: #B08832;
+    --accent-soft: #F5EDD8;
+    --display: 'DM Sans', system-ui, sans-serif;
+    --body: 'Inter', system-ui, sans-serif;
+    --radius: 8px;
+    --radius-lg: 14px;
+    --radius-pill: 999px;
+    --maxw: 1240px;
+    --shadow-sm: 0 4px 14px -8px rgba(21,17,12,0.18);
+    --shadow-md: 0 16px 40px -20px rgba(21,17,12,0.22);
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  h1, h2, h3, h4 { font-family: var(--display); margin: 0; letter-spacing: -0.02em; line-height: 1.15; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 32px; position: relative; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 26px; border-radius: var(--radius-pill); font-weight: 600; font-size: 14.5px; transition: background .25s ease, color .25s ease, transform .25s ease, box-shadow .25s ease; border: none; cursor: pointer; font-family: var(--body); }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: var(--accent-2); transform: translateY(-2px); box-shadow: 0 14px 30px -14px rgba(201,162,75,0.6); }
+  .btn-light { background: #fff; color: var(--ink); }
+  .btn-light:hover { background: var(--accent); color: #fff; transform: translateY(-2px); }
+  .btn-ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.4); }
+  .btn-ghost:hover { background: #fff; color: var(--ink); }
+  .btn .arrow { transition: transform .25s ease; }
+  .btn:hover .arrow { transform: translateX(3px); }
+  .eyebrow { display: inline-flex; align-items: center; gap: 12px; font-size: 12.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); }
+  .eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--accent); }
+  .section-title { font-size: clamp(30px, 3.6vw, 46px); font-weight: 600; margin: 18px 0 0; color: var(--ink); max-width: 22ch; }
+  .section-title.center { margin-left: auto; margin-right: auto; }
+  .section-lede { margin-top: 18px; font-size: 16.5px; color: var(--ink-dim); max-width: 64ch; line-height: 1.7; }
+  section { padding: 110px 0; position: relative; }
+  .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(21,17,12,0.0); transition: background .3s ease, backdrop-filter .3s ease, box-shadow .3s ease; }
+  .nav.scrolled { background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line); }
+  .nav-row { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
+  .brand { display: inline-flex; align-items: center; gap: 12px; font-family: var(--display); font-weight: 700; font-size: 20px; color: #fff; transition: color .3s ease; }
+  .nav.scrolled .brand { color: var(--ink); }
+  .brand-mark { width: 52px; height: 52px; flex-shrink: 0; display: grid; place-items: center; background: transparent; }
+  .brand-mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .footer-brand .brand-mark img { filter: brightness(0) invert(1); opacity: 0.95; }
+  .brand-text { line-height: 1.1; }
+  .brand-text small { display: block; font-family: var(--body); font-size: 10.5px; font-weight: 500; color: rgba(255,255,255,0.7); letter-spacing: 0.14em; text-transform: uppercase; margin-top: 3px; }
+  .nav.scrolled .brand-text small { color: var(--ink-dim); }
+  .nav-links { display: flex; gap: 36px; align-items: center; font-size: 14.5px; font-weight: 500; color: rgba(255,255,255,0.85); transition: color .3s ease; }
+  .nav.scrolled .nav-links { color: var(--ink-mid); }
+  .nav-links a { transition: color .2s ease; }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-cta { background: var(--accent); color: #fff; padding: 12px 22px; border-radius: var(--radius-pill); font-weight: 600; font-size: 14px; transition: background .25s ease, transform .25s ease; }
+  .nav-cta:hover { background: var(--accent-2); transform: translateY(-1px); }
+  @media (max-width: 980px) { .nav-links { display: none; } }
+  .hero { position: relative; min-height: 100vh; display: flex; align-items: center; color: #fff; overflow: hidden; isolation: isolate; padding: 140px 0 100px; }
+  .hero-bg { position: absolute; inset: 0; z-index: -2; overflow: hidden; }
+  .hero-bg video { position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; min-width: 100%; min-height: 100%; object-fit: cover; transform: translate(-50%, -50%); filter: brightness(0.55) saturate(0.85); }
+  .hero-bg::before { content: ""; position: absolute; inset: 0; background: rgba(21,17,12,0.55); pointer-events: none; }
+  .hero-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(95deg, rgba(21,17,12,0.96) 0%, rgba(21,17,12,0.86) 40%, rgba(21,17,12,0.55) 75%, rgba(21,17,12,0.4) 100%), linear-gradient(180deg, rgba(21,17,12,0.55) 0%, rgba(21,17,12,0.15) 35%, rgba(21,17,12,0.15) 65%, rgba(21,17,12,0.6) 100%); pointer-events: none; }
+  .hero-inner { max-width: 720px; position: relative; z-index: 1; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 12px; font-size: 12.5px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px; }
+  .hero-eyebrow::before { content: ""; width: 32px; height: 2px; background: var(--accent); }
+  .hero h1 { font-size: clamp(38px, 5.4vw, 68px); font-weight: 600; line-height: 1.08; letter-spacing: -0.025em; color: #fff; margin: 0; text-shadow: 0 2px 24px rgba(0,0,0,0.45); }
+  .hero h1 span.accent { color: var(--accent); text-shadow: 0 2px 24px rgba(0,0,0,0.4); }
+  .hero p.lede { margin-top: 28px; font-size: 18px; line-height: 1.65; color: rgba(255,255,255,0.92); max-width: 56ch; text-shadow: 0 1px 14px rgba(0,0,0,0.5); }
+  .hero-cta-row { margin-top: 40px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-meta { margin-top: 56px; display: flex; gap: 48px; flex-wrap: wrap; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.15); }
+  .hero-meta-item .num { font-family: var(--display); font-size: 32px; font-weight: 600; color: #fff; line-height: 1; letter-spacing: -0.02em; }
+  .hero-meta-item .num em { color: var(--accent); font-style: normal; }
+  .hero-meta-item .label { margin-top: 6px; font-size: 12.5px; color: rgba(255,255,255,0.65); letter-spacing: 0.06em; }
+  .about-split { display: grid; grid-template-columns: 1fr 1.05fr; gap: 72px; align-items: center; }
+  .about-image { position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/5; background: linear-gradient(135deg, #2A2118 0%, #15110C 100%); box-shadow: var(--shadow-md); }
+  .about-image::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 30% 20%, rgba(201,162,75,0.22), transparent 50%), radial-gradient(circle at 70% 80%, rgba(201,162,75,0.10), transparent 60%); }
+  .about-image-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 56px 56px; }
+  .about-image-content { position: absolute; inset: 0; padding: 48px; display: flex; flex-direction: column; justify-content: space-between; color: #fff; }
+  .about-image-mark { width: 120px; height: 120px; display: grid; place-items: center; filter: drop-shadow(0 12px 24px rgba(0,0,0,0.5)); }
+  .about-image-mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .about-image-stat { font-family: var(--display); font-weight: 600; font-size: 56px; line-height: 1; letter-spacing: -0.02em; }
+  .about-image-stat span { color: var(--accent); }
+  .about-image-label { margin-top: 12px; font-size: 14px; color: rgba(255,255,255,0.78); max-width: 24ch; line-height: 1.5; }
+  .about-feat-list { margin-top: 32px; list-style: none; padding: 0; display: grid; gap: 16px; }
+  .about-feat-list li { display: grid; grid-template-columns: 28px 1fr; gap: 14px; align-items: start; font-size: 15.5px; color: var(--ink-mid); line-height: 1.6; }
+  .about-feat-list .check { width: 24px; height: 24px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; font-weight: 700; font-size: 12px; flex-shrink: 0; margin-top: 2px; }
+  .about-feat-list strong { color: var(--ink); font-weight: 600; }
+  .about-cta { margin-top: 40px; }
+  @media (max-width: 980px) { .about-split { grid-template-columns: 1fr; gap: 48px; } .about-image { aspect-ratio: 4/3; } }
+  .stats { background: var(--bg-deep); color: #fff; padding: 80px 0; position: relative; overflow: hidden; }
+  .stats::before { content: ""; position: absolute; inset: 0; background: radial-gradient(700px 400px at 100% 0%, rgba(201,162,75,0.18), transparent 60%), radial-gradient(600px 400px at 0% 100%, rgba(201,162,75,0.08), transparent 60%); pointer-events: none; }
+  .stats .wrap { position: relative; z-index: 1; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+  .stat { padding: 0 36px; border-right: 1px solid rgba(255,255,255,0.12); text-align: center; }
+  .stat:first-child { padding-left: 0; }
+  .stat:last-child { border-right: none; padding-right: 0; }
+  .stat-num { font-family: var(--display); font-weight: 600; font-size: 56px; line-height: 1; letter-spacing: -0.02em; color: #fff; }
+  .stat-num em { color: var(--accent); font-style: normal; }
+  .stat-label { margin-top: 14px; font-size: 13.5px; color: rgba(255,255,255,0.68); letter-spacing: 0.04em; }
+  @media (max-width: 760px) { .stats-grid { grid-template-columns: 1fr 1fr; gap: 40px 0; } .stat { border-right: none; padding: 0 16px; } }
+  .services-head { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+  .services-head .eyebrow { justify-content: center; }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .service-card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 40px 32px; transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; position: relative; overflow: hidden; }
+  .service-card::before { content: ""; position: absolute; top: 0; left: 0; width: 0; height: 4px; background: var(--accent); transition: width .4s ease; }
+  .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: transparent; }
+  .service-card:hover::before { width: 100%; }
+  .service-icon { width: 64px; height: 64px; border-radius: 16px; background: var(--accent-soft); display: grid; place-items: center; color: var(--accent); margin-bottom: 24px; transition: background .3s ease, color .3s ease; }
+  .service-card:hover .service-icon { background: var(--accent); color: #fff; }
+  .service-icon svg { width: 28px; height: 28px; }
+  .service-card h3 { font-size: 22px; font-weight: 600; color: var(--ink); margin: 0 0 12px; }
+  .service-card p { font-size: 15px; color: var(--ink-dim); margin: 0 0 20px; line-height: 1.65; }
+  .service-link { display: inline-flex; align-items: center; gap: 8px; color: var(--accent); font-weight: 600; font-size: 14px; transition: gap .25s ease; }
+  .service-link:hover { gap: 14px; }
+  @media (max-width: 980px) { .services-grid { grid-template-columns: 1fr; } }
+  .audience { background: var(--bg-soft); }
+  .audience-head { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+  .audience-head .eyebrow { justify-content: center; }
+  .audience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .audience-card { background: #fff; border-radius: var(--radius-lg); padding: 48px 44px; box-shadow: var(--shadow-sm); transition: transform .3s ease, box-shadow .3s ease; display: flex; flex-direction: column; }
+  .audience-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+  .audience-tag { display: inline-block; background: var(--accent-soft); color: var(--accent); padding: 6px 14px; border-radius: var(--radius-pill); font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px; align-self: flex-start; }
+  .audience-card h3 { font-size: 28px; font-weight: 600; color: var(--ink); margin: 0 0 16px; line-height: 1.2; }
+  .audience-card > p { color: var(--ink-dim); font-size: 15.5px; margin: 0 0 24px; line-height: 1.65; }
+  .audience-list { list-style: none; padding: 0; margin: 0 0 32px; display: grid; gap: 12px; }
+  .audience-list li { display: grid; grid-template-columns: 22px 1fr; gap: 12px; align-items: start; font-size: 14.5px; color: var(--ink-mid); line-height: 1.55; }
+  .audience-list .check { width: 18px; height: 18px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 10px; margin-top: 3px; }
+  .audience-cta { margin-top: auto; align-self: flex-start; }
+  @media (max-width: 880px) { .audience-grid { grid-template-columns: 1fr; } }
+  .process-head { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: end; margin-bottom: 64px; }
+  @media (max-width: 880px) { .process-head { grid-template-columns: 1fr; gap: 24px; } }
+  .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; position: relative; }
+  .process-step { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 40px 32px; position: relative; transition: transform .3s ease, box-shadow .3s ease; }
+  .process-step:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+  .step-num { position: absolute; top: -22px; left: 32px; width: 56px; height: 56px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-family: var(--display); font-weight: 700; font-size: 18px; box-shadow: 0 12px 24px -10px rgba(201,162,75,0.55); }
+  .process-step h3 { margin: 28px 0 14px; font-size: 22px; font-weight: 600; color: var(--ink); }
+  .process-step p { color: var(--ink-dim); font-size: 14.5px; margin: 0 0 18px; line-height: 1.65; }
+  .process-step ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; border-top: 1px solid var(--line); padding-top: 16px; }
+  .process-step li { font-size: 13px; color: var(--ink-mid); display: flex; align-items: center; gap: 10px; }
+  .process-step li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  @media (max-width: 880px) { .process-grid { grid-template-columns: 1fr; gap: 40px; } }
+  .deals { background: var(--bg-deep); color: #fff; position: relative; overflow: hidden; }
+  .deals::before { content: ""; position: absolute; inset: 0; background: radial-gradient(800px 500px at 80% 0%, rgba(201,162,75,0.15), transparent 60%), radial-gradient(600px 400px at 0% 100%, rgba(201,162,75,0.08), transparent 60%); pointer-events: none; }
+  .deals .wrap { position: relative; z-index: 1; }
+  .deals .eyebrow { color: var(--accent); }
+  .deals .section-title { color: #fff; }
+  .deals .section-lede { color: rgba(255,255,255,0.7); }
+  .deals-head { text-align: center; max-width: 760px; margin: 0 auto 64px; }
+  .deals-head .eyebrow { justify-content: center; }
+  .deals-head .section-title { margin-left: auto; margin-right: auto; }
+  .deals-head .section-lede { margin-left: auto; margin-right: auto; }
+  .deal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .deal-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); padding: 36px 32px; transition: background .3s ease, border-color .3s ease, transform .3s ease; display: flex; flex-direction: column; }
+  .deal-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(201,162,75,0.4); transform: translateY(-6px); }
+  .deal-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .deal-tag { background: rgba(201,162,75,0.15); color: var(--accent); padding: 5px 12px; border-radius: var(--radius-pill); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .deal-scale { font-size: 12px; color: rgba(255,255,255,0.55); letter-spacing: 0.06em; }
+  .deal-card h3 { font-size: 19px; font-weight: 600; color: #fff; margin: 0 0 18px; line-height: 1.35; }
+  .deal-points { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 10px; }
+  .deal-points li { display: grid; grid-template-columns: 16px 1fr; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.68); line-height: 1.55; }
+  .deal-points li::before { content: "→"; color: var(--accent); font-weight: 700; }
+  .deal-role { margin-top: auto; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 12px; color: rgba(255,255,255,0.5); letter-spacing: 0.08em; text-transform: uppercase; }
+  .deal-role strong { color: var(--accent); font-weight: 700; }
+  @media (max-width: 980px) { .deal-grid { grid-template-columns: 1fr; } }
+  .testimonial { background: var(--bg-soft); padding: 110px 0; }
+  .testimonial-shell { max-width: 920px; margin: 0 auto; text-align: center; }
+  .testimonial-quote-mark { width: 56px; height: 56px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; margin: 0 auto 32px; font-family: var(--display); font-size: 36px; font-weight: 700; line-height: 1; }
+  .testimonial-quote { font-family: var(--display); font-size: clamp(22px, 2.4vw, 30px); font-weight: 500; line-height: 1.4; color: var(--ink); letter-spacing: -0.012em; margin: 0 0 36px; }
+  .testimonial-meta { font-size: 14.5px; color: var(--ink-dim); }
+  .testimonial-meta strong { display: block; color: var(--ink); font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .cta-banner { background: var(--accent); color: #fff; padding: 80px 0; position: relative; overflow: hidden; }
+  .cta-banner::before { content: ""; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; border-radius: 50%; background: rgba(255,255,255,0.06); }
+  .cta-banner::after { content: ""; position: absolute; bottom: -150px; left: -100px; width: 350px; height: 350px; border-radius: 50%; background: rgba(255,255,255,0.05); }
+  .cta-shell { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: center; position: relative; z-index: 1; }
+  .cta-shell h2 { font-size: clamp(28px, 3.2vw, 40px); font-weight: 600; color: #fff; margin: 0; max-width: 18ch; line-height: 1.2; }
+  .cta-shell p { margin: 14px 0 0; font-size: 16px; color: rgba(255,255,255,0.85); max-width: 50ch; }
+  .cta-buttons { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+  @media (max-width: 880px) { .cta-shell { grid-template-columns: 1fr; gap: 28px; } .cta-buttons { justify-content: flex-start; } }
+  footer { background: var(--bg-deep); color: rgba(255,255,255,0.7); padding: 88px 0 32px; }
+  .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 56px; margin-bottom: 56px; }
+  .footer-brand { color: #fff; margin-bottom: 20px; }
+  .footer-brand .brand-text { color: #fff; }
+  .footer-grid p { font-size: 14.5px; color: rgba(255,255,255,0.65); line-height: 1.7; max-width: 36ch; margin: 0 0 24px; }
+  .footer-social { display: flex; gap: 10px; }
+  .footer-social a { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.06); display: grid; place-items: center; color: #fff; transition: background .25s ease, transform .25s ease; }
+  .footer-social a:hover { background: var(--accent); transform: translateY(-2px); }
+  .footer-grid h4 { font-family: var(--display); font-size: 15px; font-weight: 600; color: #fff; margin: 0 0 22px; letter-spacing: -0.01em; }
+  .footer-grid ul { list-style: none; padding: 0; margin: 0; }
+  .footer-grid li { padding: 6px 0; font-size: 14.5px; }
+  .footer-grid li a { color: rgba(255,255,255,0.65); transition: color .25s ease; }
+  .footer-grid li a:hover { color: var(--accent); }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 13px; color: rgba(255,255,255,0.55); flex-wrap: wrap; gap: 14px; }
+  @media (max-width: 880px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(0.2, 0.8, 0.2, 1), transform .8s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .reveal[data-delay="1"] { transition-delay: 0.08s; }
+  .reveal[data-delay="2"] { transition-delay: 0.16s; }
+  .reveal[data-delay="3"] { transition-delay: 0.24s; }
+  .reveal[data-delay="4"] { transition-delay: 0.32s; }
+  ::selection { background: var(--accent); color: #fff; }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-row">
+    <a href="#" class="brand" aria-label="Sherbert CPA home">
+      <span class="brand-mark"><img src="assets/sherbert-cpa-logo.png" alt="Sherbert CPA, PC logo" /></span>
+      <span class="brand-text">Sherbert CPA<small>Tax Credit Real Estate</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#audience">Who We Serve</a>
+      <a href="#process">Process</a>
+      <a href="#deals">Experience</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Start a Conversation</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="assets/Sherbert_CPA.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <span class="hero-eyebrow reveal in">CPA · Consulting · Investment · Development</span>
+      <h1 class="reveal in" data-delay="1">Your deal partner in <span class="accent">tax credit real estate</span>, not a service provider.</h1>
+      <p class="lede reveal in" data-delay="2">We sit on both sides of the table. Sherbert structures and validates tax credit deals for developers, aligns capital with institutional investors, and participates directly in select transactions through our affiliated entities.</p>
+      <div class="hero-cta-row reveal in" data-delay="3">
+        <a class="btn btn-primary" href="#audience">Discover Our Approach
+          <svg class="arrow" width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#contact">Get In Touch
+          <svg class="arrow" width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="hero-meta reveal in" data-delay="4">
+        <div class="hero-meta-item"><div class="num">30<em>+</em></div><div class="label">Years of Experience</div></div>
+        <div class="hero-meta-item"><div class="num">$2.1<em>B+</em></div><div class="label">Equity Structured</div></div>
+        <div class="hero-meta-item"><div class="num">600<em>+</em></div><div class="label">Tax Credit Partnerships</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-split">
+      <div class="about-image reveal">
+        <div class="about-image-grid"></div>
+        <div class="about-image-content">
+          <div class="about-image-mark"><img src="assets/sherbert-cpa-logo.png" alt="Sherbert CPA, PC logo" /></div>
+          <div>
+            <div class="about-image-stat">30<span>+</span></div>
+            <div class="about-image-label">Years specializing in tax credit real estate, LIHTC, and Opportunity Zone deals nationwide.</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow reveal">About Sherbert CPA</span>
+        <h2 class="section-title reveal" data-delay="1">A specialized firm built around the deal, not the engagement letter.</h2>
+        <p class="section-lede reveal" data-delay="2">Sherbert CPA, PC is a North Carolina registered CPA firm operating nationally across tax credit real estate, institutional investment, and select development. Our integrated model means the same team that scopes a project is the team that closes it.</p>
+        <ul class="about-feat-list reveal" data-delay="3">
+          <li><span class="check">✓</span><span><strong>Integrated CPA, consulting, and investment model.</strong> One coordinated team handles structuring, capital alignment, and execution oversight.</span></li>
+          <li><span class="check">✓</span><span><strong>Full lifecycle deal involvement.</strong> From initial structuring through cost certification, equity placement, and exit.</span></li>
+          <li><span class="check">✓</span><span><strong>Strong alignment between developers and investors.</strong> We participate as principals, so our incentives sit with the deal economics.</span></li>
+          <li><span class="check">✓</span><span><strong>Operating knowledge institutional investors trust.</strong> Cost certification turnaround of 30 to 60 days versus the 90 to 150 day industry average.</span></li>
+        </ul>
+        <a class="btn btn-primary about-cta reveal" href="#contact" data-delay="4">Learn More About Us
+          <svg class="arrow" width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat reveal"><div class="stat-num">30<em>+</em></div><div class="stat-label">Years in Tax Credit Real Estate</div></div>
+      <div class="stat reveal" data-delay="1"><div class="stat-num">$2.1<em>B</em></div><div class="stat-label">Equity Capital Structured</div></div>
+      <div class="stat reveal" data-delay="2"><div class="stat-num">600<em>+</em></div><div class="stat-label">Tax Credit Partnerships</div></div>
+      <div class="stat reveal" data-delay="3"><div class="stat-num">50</div><div class="stat-label">States Across Our Nationwide Practice</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="services-head">
+      <span class="eyebrow reveal">Our Services</span>
+      <h2 class="section-title center reveal" data-delay="1">Comprehensive expertise across the entire deal lifecycle.</h2>
+      <p class="section-lede reveal" data-delay="2" style="margin-left:auto;margin-right:auto;">From initial structuring through cost certification and ongoing compliance, our specialized services are built for the demands of tax credit real estate.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal" data-delay="1">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <h3>Tax Returns &amp; Planning</h3>
+        <p>Partnership tax returns, Form 8609, Form 3468, lease pass-through elections, and OZ compliance, prepared by a team that handles hundreds annually.</p>
+        <a href="#contact" class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="service-card reveal" data-delay="2">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11H5a2 2 0 0 0-2 2v7h18v-7a2 2 0 0 0-2-2h-4"/><path d="M12 2v9"/><path d="m9 5 3-3 3 3"/></svg></div>
+        <h3>Audit &amp; Assurance</h3>
+        <p>Audits, reviews, and compilations issued in accordance with U.S. GAAS. Credibility for stakeholders, lenders, and institutional LPs.</p>
+        <a href="#contact" class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="service-card reveal" data-delay="3">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-5"/></svg></div>
+        <h3>Cost Certifications</h3>
+        <p>LIHTC 8609, HUD Mortgagor's, Contractor's, and QRE certifications, with comprehensive eligible basis analysis to maximize tax credits.</p>
+        <a href="#contact" class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="service-card reveal" data-delay="1">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div>
+        <h3>Development Monitoring</h3>
+        <p>End-to-end oversight through construction draws and basis reviews. Enables 30 to 60 day cost certification turnaround versus the 90 to 150 day industry norm.</p>
+        <a href="#contact" class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="service-card reveal" data-delay="2">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+        <h3>Compliance Period Reporting</h3>
+        <p>5-year HTC and 15-year LIHTC compliance support, including annual filings, basis tracking, and end-of-period exit planning.</p>
+        <a href="#contact" class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="service-card reveal" data-delay="3">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Capital Alignment</h3>
+        <p>Direct co-investment alongside institutional investors through Moxie Investment Funds. Our incentives stay aligned with deal economics, not engagement letters.</p>
+        <a href="#contact" class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="audience" id="audience">
+  <div class="wrap">
+    <div class="audience-head">
+      <span class="eyebrow reveal">Who We Serve</span>
+      <h2 class="section-title center reveal" data-delay="1">Two paths into a deal. <br/>One firm at the table.</h2>
+      <p class="section-lede reveal" data-delay="2" style="margin-left:auto;margin-right:auto;">Our work converges where developers and institutional capital meet. Identify your role and we'll route the conversation accordingly.</p>
+    </div>
+    <div class="audience-grid">
+      <div class="audience-card reveal" data-delay="1">
+        <span class="audience-tag">For Developers</span>
+        <h3>Structure, validate, and execute tax credit deals.</h3>
+        <p>We engage at the project level, from initial structuring through cost certification and ongoing compliance. Our role is to maximize credit equity and remove execution risk before it reaches your investor.</p>
+        <ul class="audience-list">
+          <li><span class="check">✓</span> Deal structuring across LIHTC, HTC, OZ, and state credit programs</li>
+          <li><span class="check">✓</span> Cost certifications (8609, HUD, QRE) with 30 to 60 day turnaround</li>
+          <li><span class="check">✓</span> Development monitoring through construction draws and basis reviews</li>
+          <li><span class="check">✓</span> Investor reporting, annual audits, and partnership tax compliance</li>
+          <li><span class="check">✓</span> End-of-compliance planning, exit options, and re-syndication analysis</li>
+        </ul>
+        <a class="btn btn-primary audience-cta" href="#contact">Discuss a Project <svg class="arrow" width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="audience-card reveal" data-delay="2">
+        <span class="audience-tag">For Investors</span>
+        <h3>Access to structured tax credit opportunities.</h3>
+        <p>We work with institutional investors seeking aligned tax credit and Opportunity Zone exposure. Deals reach our table pre-vetted, with basis verified, structure confirmed, and sponsor relationships known.</p>
+        <ul class="audience-list">
+          <li><span class="check">✓</span> Pre-qualified LIHTC, HTC, and OZ investment opportunities</li>
+          <li><span class="check">✓</span> Sponsor diligence and underwriting alignment</li>
+          <li><span class="check">✓</span> Credit basis verification and yield modeling</li>
+          <li><span class="check">✓</span> Compliance monitoring through 5- and 15-year periods</li>
+          <li><span class="check">✓</span> Direct co-investment access through Moxie Investment Funds</li>
+        </ul>
+        <a class="btn btn-primary audience-cta" href="#contact">Explore Opportunities <svg class="arrow" width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="process-head">
+      <div>
+        <span class="eyebrow reveal">How We Operate</span>
+        <h2 class="section-title reveal" data-delay="1">Three roles. One integrated table.</h2>
+      </div>
+      <p class="section-lede reveal" data-delay="2">Most CPA firms exit at the spreadsheet. We hold the deal end-to-end by structuring it, capitalizing it, and where appropriate, putting capital and development capacity into it.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal" data-delay="1">
+        <div class="step-num">01</div>
+        <h3>Deal Structuring</h3>
+        <p>CPA and consulting work that determines whether a tax credit deal closes, and at what equity. We structure partnership economics, validate eligible basis, and prepare the documents institutional investors require before funding.</p>
+        <ul><li>Sherbert CPA, PC</li><li>Sherbert Consulting, Inc.</li></ul>
+      </div>
+      <div class="process-step reveal" data-delay="2">
+        <div class="step-num">02</div>
+        <h3>Capital Alignment</h3>
+        <p>Direct participation alongside institutional investors. We commit capital into select transactions through Moxie Investment Funds, aligning sponsor and investor incentives with our own.</p>
+        <ul><li>Moxie Investment Funds</li></ul>
+      </div>
+      <div class="process-step reveal" data-delay="3">
+        <div class="step-num">03</div>
+        <h3>Execution Involvement</h3>
+        <p>Selective real estate development and construction management. When a project benefits from operator-level oversight, we engage directly as a principal, not as a referral.</p>
+        <ul><li>TMS Development &amp; Management</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="deals" id="deals">
+  <div class="wrap">
+    <div class="deals-head">
+      <span class="eyebrow reveal">Deal Experience</span>
+      <h2 class="section-title center reveal" data-delay="1">The transactions we know intimately.</h2>
+      <p class="section-lede reveal" data-delay="2">Our work is concentrated by design. We hold deep operating knowledge of the credit programs and deal structures most exposed to compliance risk and investor scrutiny.</p>
+    </div>
+    <div class="deal-grid">
+      <div class="deal-card reveal" data-delay="1">
+        <div class="deal-meta"><span class="deal-tag">LIHTC · 9%</span><span class="deal-scale">144 Units</span></div>
+        <h3>Affordable housing development, Southeast U.S.</h3>
+        <ul class="deal-points">
+          <li>Structured partnership economics with two institutional LPs</li>
+          <li>Maximized eligible basis through cost certification on Form 8609</li>
+          <li>Coordinated state-level credit allocation alongside federal credits</li>
+        </ul>
+        <div class="deal-role">Role · <strong>CPA + Structuring</strong></div>
+      </div>
+      <div class="deal-card reveal" data-delay="2">
+        <div class="deal-meta"><span class="deal-tag">HTC · Lease Pass-Through</span><span class="deal-scale">Adaptive Reuse</span></div>
+        <h3>Historic rehabilitation, urban core repositioning.</h3>
+        <ul class="deal-points">
+          <li>Prepared lease pass-through election and NPS documentation</li>
+          <li>Federal HTC paired with state historic credit, dual cost certification</li>
+          <li>Investor exit modeled through 5-year compliance period</li>
+        </ul>
+        <div class="deal-role">Role · <strong>CPA + Investor</strong></div>
+      </div>
+      <div class="deal-card reveal" data-delay="3">
+        <div class="deal-meta"><span class="deal-tag">OZ Fund · Mixed-Use</span><span class="deal-scale">Ground-Up</span></div>
+        <h3>Qualified Opportunity Fund, multi-asset structure.</h3>
+        <ul class="deal-points">
+          <li>QOF compliance monitoring across substantial improvement test</li>
+          <li>Capital deferral structure for taxpayer LPs</li>
+          <li>Year-7 and year-10 step-up planning embedded into operating agreement</li>
+        </ul>
+        <div class="deal-role">Role · <strong>Structuring + Capital</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial">
+  <div class="wrap">
+    <div class="testimonial-shell reveal">
+      <div class="testimonial-quote-mark">"</div>
+      <p class="testimonial-quote">They uniquely understand the tax, audit, and equity structuring issues unique to the affordable housing industry. The professionals at Sherbert CPA, PC possess the knowledge and expertise to solve project related issues and remain at the forefront of the latest developments affecting affordable housing.</p>
+      <div class="testimonial-meta"><strong>Timothy M. Morgan</strong>President, Jonesboro Investments Corp. | Grand Palms Apartments, Bradenton, FL</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner" id="contact">
+  <div class="wrap">
+    <div class="cta-shell">
+      <div class="reveal">
+        <h2>Ready to start a conversation about your next deal?</h2>
+        <p>Whether you're sponsoring a deal or allocating capital, the first step is a qualifying call. We'll determine fit on both sides, quickly and directly.</p>
+      </div>
+      <div class="cta-buttons reveal" data-delay="2">
+        <a class="btn btn-light" href="mailto:bsherbert@sherbertcpa.com">Start a Conversation <svg class="arrow" width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+17043994455">(704) 399-4455</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="#" class="brand footer-brand">
+          <span class="brand-mark"><img src="assets/sherbert-cpa-logo.png" alt="Sherbert CPA, PC logo" /></span>
+          <span class="brand-text">Sherbert CPA<small>Tax Credit Real Estate</small></span>
+        </a>
+        <p>A North Carolina Registered CPA Firm operating nationally across tax credit real estate, institutional investment, and select development.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/sherbert-group/" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg></a>
+          <a href="mailto:bsherbert@sherbertcpa.com" aria-label="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+          <a href="tel:+17043994455" aria-label="Phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Companies</h4><ul><li><a href="#">Sherbert CPA, PC</a></li><li><a href="#">Sherbert Consulting, Inc.</a></li><li><a href="#">Moxie Investment Funds</a></li><li><a href="#">TMS Development &amp; Mgmt</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="#services">Tax Returns &amp; Planning</a></li><li><a href="#services">Audit &amp; Assurance</a></li><li><a href="#services">Cost Certifications</a></li><li><a href="#services">Development Monitoring</a></li><li><a href="#services">Compliance Reporting</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>13777 Ballantyne Corporate Pl.</li><li>Suite 325, Charlotte, NC 28277</li><li>(704) 399-4455</li><li><a href="mailto:bsherbert@sherbertcpa.com">bsherbert@sherbertcpa.com</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Sherbert CPA, PC. All rights reserved.</div>
+      <div>North Carolina Registered CPA Firm</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+  document.querySelectorAll('.reveal:not(.in)').forEach(el => io.observe(el));
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if (window.scrollY > 60) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>
+</body>
+</html>
